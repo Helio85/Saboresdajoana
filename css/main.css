@@ -425,7 +425,7 @@ header .menu ul li a {
   width: 100%;
   -ms-grid-columns: 2fr 1fr 1fr;
       grid-template-columns: 2fr 1fr 1fr;
-  grid-row-gap: 16px;
+  grid-row-gap: 20px;
 }
 
 .l-main__cardapio .box1 {
