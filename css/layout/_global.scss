@@ -1,0 +1,48 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  min-height: -webkit-fill-available;
+}
+
+input[type=submit] {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+}
+
+*:focus {
+  outline: 0;
+}
+
+html,
+body,
+#root {
+  font-size: 62.5%;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+h2{
+  color: #4dbd38;
+}

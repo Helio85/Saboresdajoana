@@ -1,0 +1,384 @@
+.l-main__inicio {
+
+    .slideshow-container {
+        width: 100vw;
+        position: relative;
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+        display: none;
+
+        img {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Caption text */
+    .text {
+        color: #f2f2f2;
+        font-size: 50px;
+        padding: 8px 12px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Number text (1/5 etc) */
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+    .dot-indicator {
+        position: absolute;
+        left: 50%;
+        bottom: 5%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+        background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+}
+
+.l-main__chef {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    place-items: center;
+    background-color: white;
+    height: 70vh;
+    position: relative;
+    z-index: 0;
+
+    .background-img {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+
+        img {
+            height: 70vh;
+            width: 100vw;
+            object-fit: cover;
+        }
+    }
+
+    .white-layer {
+        background-color: white;
+        opacity: 80%;
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+    }
+
+    .l-main__chef__foto {
+        width: 40vw;
+        z-index: 2;
+        padding: 20px;
+
+        img {
+            max-width:100%;
+            max-height:100%;
+        }
+
+    }
+
+    .l-main__chef__info {
+        width: 60vw;
+        padding-right: 150px;
+        padding-left: 50px;
+        text-align: justify;
+        font-size: 20px;
+        color: black;
+        z-index: 2;
+    }
+}
+ 
+.l-main__cardapio {
+    text-align: center;
+    font-size: 25px;
+    position: relative;
+    z-index: 0;
+    padding: 80px 0;
+
+    .background-img {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+
+        img {
+            height: 100%;
+            width: 100vw;
+            object-fit: cover;
+        }
+    }
+
+    .color-layer {
+        background-color: rgba(215,206,181,0.99);
+        opacity: 80%;
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+    }
+
+
+    .cardapio_buttons{
+        width: 90%;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        border-radius: 16px;
+        background-color: rgba(255,255,255,0.5) ;
+        z-index: 2;
+
+    }
+
+    #products_container{
+        width: 80%;
+        height: 100%;
+        margin: auto;
+        padding: 16px 0;
+        border-radius: 16px;
+        background-color: rgba(255,255,255,0.5) ;
+        z-index: 2;
+        display: grid;
+        place-items: center;
+
+        .tabcontent{
+            width: 100%;
+            place-items: center;
+            grid-template-columns: repeat(auto-fit, minmax(50%,1fr));
+            grid-row-gap:16px;
+        }
+    }
+
+    /* Style the tab buttons */
+    .tablink {
+        background-color:transparent;
+        color:rgba(157,117,91,1);
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: 17px;
+        width: 100%;
+    }
+
+    .defaultOpen {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .productlink {
+        background-color:rgba(157,117,91,1);
+        color: #FFF;
+        font-weight: bold;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: 17px;
+        width: 90%;
+    }
+
+    /* Change background color of buttons on hover */
+    .tablink:hover {
+        background-color: #777;
+    }
+ 
+    /* Set default styles for tab content */
+    .tabcontent {
+        color: black;
+        padding: 50px;
+        text-align: center;
+        font-size: 17px;
+        display: flex;
+        flex-direction: column;
+    }
+    .subcategoria {
+        display: grid;
+        width: 70%;
+        grid-template-columns: repeat(auto-fit, minmax(50%,1fr));
+        grid-row-gap:16px;
+    }
+
+    .linha {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-row-gap:16px;
+    }
+
+    .box1 {
+        text-align: left;
+    }
+}
+
+.l-main__sucos {
+    background-color: grayscale($color: #757272);
+    display: flex;
+    flex-direction: column;
+    height: 94vh;
+    width: 100vw;
+    position: relative;
+    z-index: 0;
+
+    .sucos-info {
+        position: absolute;
+        color: white;
+        font-size: 30px;
+        z-index: 2;
+        text-align: center;
+        place-items: center;
+        justify-content: center;
+        width: 1300px;
+    }
+
+    .background-color {
+        background-color: grayscale($color: #333232);
+        opacity: 80%;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+    }
+    .background-img {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+
+        img {
+            height: 100vh;
+            width: 100vw;
+            object-fit: cover;
+        }
+    }
+}
+
+.l-main__sobremesa {
+    height: 505px;
+    position: relative;
+    z-index: 0;
+
+    .sobremesa-info {
+        position: absolute;
+        color: black;
+        font-size: 30px;
+        z-index: 2;
+        text-align: center;
+        place-items: center;
+        justify-content: center;
+        width: 1300px;
+    }
+
+    .background-color {
+        background-color: white;
+        opacity: 80%;
+        width: 100vw;
+        height: 77vh;
+        display: flex;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+    }
+
+    .background-img {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+
+        img {
+            height: 50%;
+            width: 100vw;
+            object-fit: cover;
+        }
+    }
+}

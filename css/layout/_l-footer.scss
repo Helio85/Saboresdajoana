@@ -1,0 +1,48 @@
+footer {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(50,138,34,0.9);
+    place-items: center;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    height: 50vh;
+    width: 100vw;
+
+    .background-img{
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        img{
+            height: 50vh;
+            width: 100vw;
+            object-fit: cover;
+        }
+    }
+
+    h3{
+        font-size:36px;
+    }
+
+    .icone-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+        a{
+            margin-left:5px;
+        }
+    }
+}
+
+.footer_copyright{
+    background-color: #000;
+    display: flex;
+    position: relative;
+    height: 50px;
+    width: 100vw;
+    p{
+        color: #fff;
+    }
+}
