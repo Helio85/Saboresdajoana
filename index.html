@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
- 
+
 <head>
     <meta charset="UTF-8">
     <meta name="Sabores da Joana" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
 <body>
     <header class="header">
         <section class="logo">
-            <img src="http://servidorpromover.com/sabores-de-joana/wp-content/uploads/2017/08/logo-1-2.png">
+            <img id="header_logo" src="http://servidorpromover.com/sabores-de-joana/wp-content/uploads/2017/08/logo-1-2.png">
         </section>
 
         <section class="menu">
@@ -96,7 +96,7 @@
 
         <div class="l-main__chef__info">
             <h2>A Chefe</h2>
-            <p> Sabores da Joana é uma empresa especializada em alimentação saudável com refeições nutritivas e 
+            <p> Sabores da Joana é uma empresa especializada em alimentação saudável com refeições nutritivas e
                 equilibradas, que surgiu em 2017 com a iniciativa da Chef Joana Brito e seu esposo e sócio Jonatas
                 Yasumoto.
             </p>
@@ -104,7 +104,7 @@
                 Oferecer aos nossos clientes uma alimentação equilibrada e personalizada, atendendo as necessidades
                 individuais de cada um.</p>
             <p> VISÃO:
-                Ser uma empresa referência em alimentação saudável, com pontos de venda, lojas próprias e micro 
+                Ser uma empresa referência em alimentação saudável, com pontos de venda, lojas próprias e micro
                 franquias.</p>
             <p> VALORES:
                 Trabalho com excelência, Comprometimento, Respeito, Contribuição, Transformação.
@@ -118,7 +118,7 @@
             <img src="http://servidorpromover.com/sabores-de-joana/wp-content/uploads/2017/06/004.jpg" alt="">
         </div>
         <div class="color-layer"></div>
-        
+
         <h2>MONTE O SEU PRATO</h2>
         <P>ESCOLHA 1 PROTEINA E 2 ACOMPANHAMENTOS</P>
         <p>As REFEIÇÕES possuem dois tamanhos. Uma de 500 gramas, sendo 150 gramas de proteína e 350 gramas de
@@ -129,10 +129,10 @@
             personalizados conforme seu plano nutricional. Consulte-nos!</p>
 
         <div id="cardapio_buttons" class="cardapio_buttons"></div>
-        <div id="products_container" >
-       
+        <div id="products_container">
 
-  
+
+
         </div>
     </section>
 
@@ -201,6 +201,21 @@
     </section>
 
     <script src="./js/script.js"></script>
+    <script>
+        window.onscroll = function (oEvent) {
+            var y = window.scrollY;
+            console.log(y);
+            if (y > 300) {
+              document.getElementById('header_logo').classList.add("small");
+              document.getElementById('header_logo').classList.remove("big");
+
+            } else {
+              document.getElementById('header_logo').classList.add("big");
+              document.getElementById('header_logo').classList.remove("small");
+
+            }
+        }
+    </script>
 </body>
 
 </html>

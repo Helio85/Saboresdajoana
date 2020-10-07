@@ -1,6 +1,5 @@
 function listaItem(opcao) {
   // Hide all elements with class="tabcontent" by default */
-  console.log(opcao)
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
@@ -53,10 +52,6 @@ fetch('./data.json')
     })
 
     data.map((item) => {
-      console.log(subcategoria);
-      console.log(item.subcategoria);
-      console.log(categoria);
-      console.log(item.categoria);
       if (item.categoria !== categoria) {
         if (categoria !== 'a') {
           subcategoria = 'h';

@@ -1,3 +1,11 @@
+.small{
+  height: 100px;
+}
+
+.big{
+  height: 100px;
+} 
+
 header{
   background-color: #fff;
   opacity: 80%;
@@ -11,7 +19,15 @@ header{
 
 
   .logo{
+    img{
+      margin-top: 10px;
 
+      @media (max-width: 1250px) {
+        height: 80px;
+        margin-left: 20px;
+        margin-top: 10px;
+      }
+    }
   }
 
   .menu{
@@ -20,24 +36,63 @@ header{
     background-color: #fff;
     opacity: 80%;
 
-    ul{
-      list-style: none;
-      position: relative;
+    label{
+      display: none;
+    }
 
+    nav{
+      height: 100px;
 
-      li{
-        width: 150px;
-        float: left;
+      ul{
+        list-style: none;
+        position: relative;
+        height:  100px;
+        display: flex;
+        place-items: center;
+        margin: 0;
+  
+  
+        li{
+          width: 150px;
+          float: left;
+  
+          a{
+            padding: 15px;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            color: #999;
+            font-weight:bold;
+            font-size: 16px;
+            transition: all 0.5s;
 
-        a{
-          padding: 15px;
-          display: block;
-          text-decoration: none;
-          text-align: center;
-          color: #000;
-          font-style:bold;
+            &:hover{
+              background-color: #4dbd38;
+              color: #fff;
+            }
+          }
         }
       }
     }
+
+  
+
+    label[for=”bt_menu”]{
+      padding: 5px;
+      background-color: #222;
+      color: #fff;
+      font-family: Arial;
+      text-align: center;
+      font-size: 30px;
+      cursor: pointer;
+      height: 50px;
+      display: none;
+
+    }
+     
+    #bt_menu {
+      display: none;
+    }
+
   }
 }
