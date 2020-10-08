@@ -34,6 +34,16 @@ footer {
             margin-left:5px;
         }
     }
+
+    @media (max-width: 1000px) {
+        height: 30vh;
+
+        .background-img {
+            img {
+                height: 30vh;
+            }
+        };
+    }
 }
 
 .footer_copyright{

@@ -14,6 +14,82 @@
             height: 100vh;
             object-fit: cover;
         }
+        .info01 {
+
+            white-space: nowrap;
+            font-size: 51px;
+            font-weight: 400;
+            font-family: "Great Vibes";
+            color: black;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-width: 0px;
+
+            transition: none 0s ease 0s;
+            text-align: center;
+            line-height: 41px;
+            margin: 0px;
+            padding: 14px 34px;
+            letter-spacing: 0px;
+            min-height: 0px;
+            min-width: 0px;
+            max-height: none;
+            max-width: none;
+
+            transform-origin: 50% 50% 0px;
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        }
+
+        .info02 {
+
+            white-space: nowrap;
+            font-size: 44px;
+            font-weight: 700;
+            color: rgb(255, 255, 255);
+            font-family: Lora;
+            text-transform: uppercase;
+            background-color: rgba(77, 189, 56, 0.9);
+            border-width: 0px;
+            letter-spacing: 1px;
+
+            transition: none 0s ease 0s;
+            text-align: center;
+            line-height: 41px;
+            margin: 0px;
+            padding: 14px 34px;
+            min-height: 0px;
+            min-width: 0px;
+            max-height: none;
+            max-width: none;
+
+            transform-origin: 50% 50% 0px;
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        }
+        
+        .info03 {
+
+            min-width: 461px;
+            max-width: 461px;
+            white-space: normal;
+            font-size: 18px;
+            line-height: 23px;
+            font-weight: 700;
+            color: rgb(255, 255, 255);
+            font-family: Lora;
+            text-transform: uppercase;
+            background-color: rgba(77, 189, 56, 0.9);
+            border-width: 0px;
+            letter-spacing: 1px;
+            visibility: inherit;
+            transition: none 0s ease 0s;
+            text-align: center;
+            margin: 0px;
+            padding: 14px 34px;
+            min-height: 0px;
+            max-height: none;
+            opacity: 1;
+            transform-origin: 50% 50% 0px;
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        }
     }
 
     /* Next & previous buttons */
@@ -150,7 +226,7 @@
         top: 0;
         z-index: 1;
     }
-
+ 
     .l-main__chef__foto {
         width: 40vw;
         z-index: 2;
@@ -172,12 +248,31 @@
         color: black;
         z-index: 2;
     }
+
+    @media (max-width: 550px) {
+        display: flex;
+        flex-direction: column;   
+
+        .l-main__chef__foto {
+            width: 100vw;
+            margin-left: 190px;
+        }
+     
+        .l-main__chef__info {
+            text-align: justify;
+            font-size: 30px;
+            color: black;
+            z-index: 2;
+            width: 90vw;
+            margin-left: 100px;
+            margin-bottom: 150px;
+        }
+    }
 }
  
 .l-main__cardapio {
-    text-align: center;
-    font-size: 25px;
     position: relative;
+    text-align: center;
     z-index: 0;
     padding: 80px 0;
 
@@ -204,6 +299,27 @@
         z-index: -1;
     }
 
+    h2 {
+        text-align: center;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .subtitle {
+        text-align: center;
+        color: #777264;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .info {
+        font-family: Lato;
+        color: #2d3033;
+        line-height: 24px;
+        font-size: 13px;
+        text-align: justify;
+        margin: 10px 80px 30px 80px;
+    }
 
     .cardapio_buttons{
         width: 90%;
@@ -214,7 +330,6 @@
         border-radius: 16px;
         background-color: rgba(255,255,255,0.5) ;
         z-index: 2;
-
     }
 
     #products_container{
@@ -226,13 +341,20 @@
         background-color: rgba(255,255,255,0.5) ;
         z-index: 2;
         display: grid;
-        place-items: center;
+
 
         .tabcontent{
             width: 100%;
-            place-items: center;
             grid-template-columns: repeat(auto-fit, minmax(50%,1fr));
             grid-row-gap:16px;
+            color: black;
+            text-transform: uppercase;
+            padding: 50px 10px;
+            text-align: left;
+            align-items: center;
+            font-size: 17px;
+            display: flex;
+            flex-direction: column;
         }
     }
 
@@ -270,22 +392,44 @@
     /* Change background color of buttons on hover */
     .tablink:hover {
         background-color: #777;
+        color: white;
+        border-radius: 16px;
     }
  
-    /* Set default styles for tab content */
-    .tabcontent {
-        color: black;
-        padding: 50px;
-        text-align: center;
-        font-size: 17px;
-        display: flex;
-        flex-direction: column;
-    }
     .subcategoria {
         display: grid;
-        width: 70%;
-        grid-template-columns: repeat(auto-fit, minmax(50%,1fr));
+        width: 85%;
+        grid-template-columns: 1fr 1fr;
+        grid-gap:16px;
+    }
+
+    .details {
+        background-color: rgba(157,117,91,1);
+        border-radius: 16px;
+        padding: 10px 10px;
         grid-row-gap:16px;
+        height: 30px;
+        summary {color: white;};
+    }
+
+    .details[open] {
+        height: 100%;
+        background-color: rgba(215,206,181,0.99);
+      }
+
+    .details:hover {
+        background-color: rgba(215,206,181,0.99);
+    }
+
+    summary::-webkit-details-marker {
+        display: none
+      }
+
+    .info-nutricional {
+        background-color: rgba(215,206,181,0.99);
+        border-radius: 16px;
+        margin: 10px;
+        padding: 5px 5px;
     }
 
     .linha {
@@ -297,6 +441,27 @@
 
     .box1 {
         text-align: left;
+    }
+
+    @media (max-width: 550px) {
+        width: 100vw;
+
+        .background-img {
+            height: 100%;
+        }
+
+        .tablink {
+            font-size: 25px;
+        }
+    
+        .subcategoria {
+            width: 95%;
+        }
+
+        .details {
+            height: 40px;
+            font-size: 20px;
+        }
     }
 }
 
@@ -311,13 +476,16 @@
 
     .sucos-info {
         position: absolute;
-        color: white;
-        font-size: 30px;
         z-index: 2;
         text-align: center;
         place-items: center;
         justify-content: center;
-        width: 100%;
+        width: 90%;
+        font-size: 30px;
+        color: #fff;
+        font-weight: 800;
+        font-family: Lora !important;
+        margin-top: 150px;
     }
 
     .background-color {
@@ -341,10 +509,22 @@
             object-fit: cover;
         }
     }
+    @media (max-width: 550px) {
+        height: 30vh;
+
+        .background-img {
+            img {
+                height: 30vh;
+            }
+        }
+        .background-color {
+            height: 30vh;
+        }
+    }
 }
 
 .l-main__sobremesa {
-    height: 505px;
+    height: 78vh;
     position: relative;
     z-index: 0;
 
@@ -363,7 +543,7 @@
         background-color: white;
         opacity: 80%;
         width: 100vw;
-        height: 77vh;
+        height: 78vh;
         display: flex;
         position: absolute;
         top: 0;
@@ -379,6 +559,24 @@
             height: 50%;
             width: 100vw;
             object-fit: cover;
+        }
+    }
+
+    @media (max-width: 550px) {
+        height: 30vh;
+        
+        .background-img {
+            img {
+                height: 30vh;
+            }
+        }
+        .background-color {
+            height: 30vh;
+        }
+
+        .sobremesa-info {
+            width: 85%;
+            margin-top: 100px;
         }
     }
 }

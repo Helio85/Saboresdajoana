@@ -75,8 +75,9 @@ fetch('./data.json')
         divSubCategories.classList.add("subcategoria");
         document.getElementById(item.categoria).appendChild(divSubCategories);
       }
-  
+   
       var details = document.createElement("details");
+      details.classList.add('details');
       details.id = item.nome;
       details.innerHTML = '<Div class="info-nutricional">' +
                           '<br>' + '<Div class="box">' + 'INFORMAÇÃO NUTRICIONAL' + '</Div>' + '<br>' +
