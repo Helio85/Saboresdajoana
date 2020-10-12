@@ -35,7 +35,7 @@ fetch('./data.json')
         btn.classList.add("tablink");
         document.getElementById('cardapio_buttons').appendChild(btn);
         var divCategories = document.createElement("DIV");
-        divCategories.id = item.categoria;
+        divCategories.id = item.categoria.split(' ').join('');
         divCategories.classList.add("tabcontent");
         if (categorias.length === 1) {
           divCategories.classList.add("defaultOpen");
@@ -46,7 +46,7 @@ fetch('./data.json')
 
         document.getElementById('products_container').appendChild(divCategories);
         btn.onclick = function (event) {
-        listaItem(item.categoria);}
+        listaItem(item.categoria.split(' ').join(''))};
       }
 
     })
@@ -62,18 +62,18 @@ fetch('./data.json')
         if (item.subcategoria !== '') {
           var title3 = document.createElement("h3");
           title3.textContent = item.subcategoria;
-          document.getElementById(item.categoria).appendChild(title3);
+          document.getElementById(item.categoria.split(' ').join('')).appendChild(title3);
         }
         var divSubCategories = document.createElement("DIV");
         if (item.subcategoria === '') {
-          divSubCategories.id = 'sub'+item.categoria;
+          divSubCategories.id = 'sub'+item.categoria.split(' ').join('');
          }
         else {
           divSubCategories.id = item.subcategoria.split(' ').join('');
           subcategoria = item.subcategoria.split(' ').join('');
         }
         divSubCategories.classList.add("subcategoria");
-        document.getElementById(item.categoria).appendChild(divSubCategories);
+        document.getElementById(item.categoria.split(' ').join('')).appendChild(divSubCategories);
       }
    
       var details = document.createElement("details");
@@ -132,9 +132,9 @@ fetch('./data.json')
                           item.ingredientes + '<br>' + '<br>' +
                           'ALÉRGICOS: ' + item.alergicos +
                           '</Div>';
-
+ 
       if (item.subcategoria === '') {
-        document.getElementById('sub'+item.categoria).appendChild(details);
+        document.getElementById('sub'+item.categoria.split(' ').join('')).appendChild(details);
       }
       else {
         document.getElementById(item.subcategoria.split(' ').join('')).appendChild(details);
